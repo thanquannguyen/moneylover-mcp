@@ -1,0 +1,4 @@
+node_modules/
+.env
+.moneylover-mcp/
+*.log

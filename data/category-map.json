@@ -1,0 +1,217 @@
+{
+  "IS_DEBT": {
+    "global_id": "DBDE741D53664EAC890A7715DAA58348",
+    "name": "Đi vay",
+    "type": 1
+  },
+  "IS_DEPOSIT": {
+    "global_id": "1C067BC9A86D47FD8ABA99A2367DC846",
+    "name": "Gửi tiền",
+    "type": 1
+  },
+  "IS_GIVE": {
+    "global_id": "F57A27DCFD4F459F8F54CF832D15FA92",
+    "name": "Được tặng",
+    "type": 1
+  },
+  "IS_INCOMING_TRANSFER": {
+    "global_id": "706c61cdbbd04a058074dad8249e5198",
+    "name": "Tiền chuyển đến",
+    "type": 1
+  },
+  "IS_OTHER_EXPENSE": {
+    "global_id": "FD27695297AF497FBB4BDBFDF63FC447",
+    "name": "Các chi phí khác",
+    "type": 2
+  },
+  "IS_OTHER_INCOME": {
+    "global_id": "C6F36B54B99641FF9E3CA1D132F558FF",
+    "name": "Thu nhập khác",
+    "type": 1
+  },
+  "IS_OUTGOING_TRANSFER": {
+    "global_id": "01c995021dcd4ae59850d3c951d59a53",
+    "name": "Tiền chuyển đi",
+    "type": 2
+  },
+  "IS_PAYMENT": {
+    "global_id": "DC04F79BEFFC417EB716AB597D619423",
+    "name": "Thanh toán",
+    "type": 1
+  },
+  "IS_REPAYMENT": {
+    "global_id": "491D006A41D94CB39314DFA3257E2338",
+    "name": "Trả nợ",
+    "type": 2
+  },
+  "accessories0": {
+    "global_id": "A2D0C6EE3FF7462D99620E6B2F2BDE95",
+    "name": "Phụ kiện",
+    "type": 2
+  },
+  "award0": {
+    "global_id": "256A4B77207940C9B00522B4DDAA6ABA",
+    "name": "Thưởng",
+    "type": 1
+  },
+  "books0": {
+    "global_id": "85E576943EF3461CBD6E0D525948C55D",
+    "name": "Sách",
+    "type": 2
+  },
+  "cafe0": {
+    "global_id": "E8F3478599814B1FB555A174CFB98EC5",
+    "name": "Cà phê",
+    "type": 2
+  },
+  "clothing0": {
+    "global_id": "4D1E4C51E5E54BC583FFA93A2E5ECFD5",
+    "name": "Quần áo",
+    "type": 2
+  },
+  "doctor0": {
+    "global_id": "FEF53CD15E7D4547A3ED8199F287BCD6",
+    "name": "Khám chữa bệnh",
+    "type": 2
+  },
+  "education0": {
+    "global_id": "3B3D7F5CE1784DFABC48E99471F3B96D",
+    "name": "Giáo dục",
+    "type": 2
+  },
+  "electricity0": {
+    "global_id": "E111BC88FCB54E97823345A569389CF0",
+    "name": "Hoá đơn điện",
+    "type": 2
+  },
+  "entertainment0": {
+    "global_id": "3568A26B26F341D5A20B069532EA4C9F",
+    "name": "Giải trí",
+    "type": 2
+  },
+  "family0": {
+    "global_id": "9D7BD5CFC6E647349EA89470AD7E5486",
+    "name": "Gia đình",
+    "type": 2
+  },
+  "fees_charges0": {
+    "global_id": "E29C07A03E5C492FB37F8384E4056112",
+    "name": "Chi phí",
+    "type": 2
+  },
+  "foodndrink0": {
+    "global_id": "98AD2DC57E464C5FA1360B9E924F626D",
+    "name": "Ăn uống",
+    "type": 2
+  },
+  "friendnlover0": {
+    "global_id": "806A37219E3844A396D3B69B95710ED0",
+    "name": "Bạn bè & Người yêu",
+    "type": 2
+  },
+  "games0": {
+    "global_id": "4E6BF9435B14406F9554E4CD78E11596",
+    "name": "Trò chơi",
+    "type": 2
+  },
+  "gifts_donations0": {
+    "global_id": "E0446E75B5924162A722BA4DAB0C7127",
+    "name": "Quà tặng & Quyên góp",
+    "type": 2
+  },
+  "insurance0": {
+    "global_id": "BD2EC93B3204434999EC1E9ECB2EA293",
+    "name": "Bảo hiểm",
+    "type": 2
+  },
+  "interestmoney0": {
+    "global_id": "E709818432A54F07B3B5C041B2C3ED01",
+    "name": "Tiền lãi",
+    "type": 1
+  },
+  "internet0": {
+    "global_id": "B6A62372553A437BB337550209876BC9",
+    "name": "Hoá đơn internet",
+    "type": 2
+  },
+  "invest0": {
+    "global_id": "A56EEE8CD1144F95A8E82857C3C9F60D",
+    "name": "Đầu tư",
+    "type": 2
+  },
+  "maintenance0": {
+    "global_id": "2E2B4CC34B724138BA831A50A3C9CAF9",
+    "name": "Bảo dưỡng",
+    "type": 2
+  },
+  "medical0": {
+    "global_id": "7413782D5D424892B036DAF986A6FE40",
+    "name": "Sức khỏe",
+    "type": 2
+  },
+  "movies0": {
+    "global_id": "2794DD2DA9CA4B028B078C1A3B8C3C0F",
+    "name": "Phim ảnh",
+    "type": 2
+  },
+  "parking0": {
+    "global_id": "191323233BA947398CA6493B3312A5BF",
+    "name": "Gửi xe",
+    "type": 2
+  },
+  "personal_care0": {
+    "global_id": "62E1E3574C1F46EE9B3521321B83350B",
+    "name": "Chăm sóc cá nhân",
+    "type": 2
+  },
+  "petrol0": {
+    "global_id": "2A529127F9D74371A6C8BBB319B9D2A2",
+    "name": "Xăng dầu",
+    "type": 2
+  },
+  "pharmacy0": {
+    "global_id": "0735A943C668409DBBF5CB85BCEFC42F",
+    "name": "Thuốc",
+    "type": 2
+  },
+  "rentals0": {
+    "global_id": "9AD68F9D497F4DB4A88C27101F385729",
+    "name": "Thuê nhà",
+    "type": 2
+  },
+  "restaurants0": {
+    "global_id": "694411BFBA11405A91B8B152C666F8D0",
+    "name": "Nhà hàng",
+    "type": 2
+  },
+  "salary0": {
+    "global_id": "CC1E8BF8876B410F9C8FE53AC614829E",
+    "name": "Lương",
+    "type": 1
+  },
+  "selling0": {
+    "global_id": "CF96ED3976624BA39E5EABC833B5689D",
+    "name": "Bán đồ",
+    "type": 1
+  },
+  "shopping0": {
+    "global_id": "B2A73776CBD34CDA80C12C643C15900E",
+    "name": "Mua sắm",
+    "type": 2
+  },
+  "transport0": {
+    "global_id": "5F0D590B8A5D41C680D9A1378541F1F3",
+    "name": "Di chuyển",
+    "type": 2
+  },
+  "travel0": {
+    "global_id": "31573ABD6F5C4E97B5D10CD6F222940C",
+    "name": "Du lịch",
+    "type": 2
+  },
+  "utilities0": {
+    "global_id": "D91D5F087F34424E8FA837711DD5E8A7",
+    "name": "Hoá đơn & Tiện ích",
+    "type": 2
+  }
+}

@@ -1,0 +1,1 @@
+{"bin":{"moneylover-mcp":"src/server.js"},"dependencies":{"@modelcontextprotocol/sdk":"^1.17.0","zod":"^3.23.8"},"description":"MoneyLover MCP server (unofficial)","license":"MIT","main":"src/server.js","name":"moneylover-mcp","scripts":{"start":"node src/server.js","test":"node --test test/client.test.mjs"},"type":"module","version":"0.1.0"}
