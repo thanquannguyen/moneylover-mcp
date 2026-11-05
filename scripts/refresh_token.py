@@ -38,9 +38,11 @@ from __future__ import annotations
 import argparse
 import base64
 import getpass
+import http.client
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -80,15 +82,25 @@ def _post_json(url: str, *, headers=None, data: bytes | None = None) -> dict:
     merged = dict(DEFAULT_HEADERS)
     merged.update(headers or {})
     req = urllib.request.Request(url, data=data, headers=merged, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return _read_json(resp)
-    except urllib.error.HTTPError as exc:
+    # MoneyLover's endpoints occasionally drop the connection mid-response
+    # (RemoteDisconnected / IncompleteRead); retry those a few times.
+    last_error = None
+    for attempt in range(3):
         try:
-            detail = exc.read().decode("utf-8", "replace")
-        except Exception:
-            detail = ""
-        raise RuntimeError(f"HTTP {exc.code} from {url}: {detail[:300]}") from exc
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return _read_json(resp)
+        except urllib.error.HTTPError as exc:
+            try:
+                detail = exc.read().decode("utf-8", "replace")
+            except Exception:
+                detail = ""
+            raise RuntimeError(f"HTTP {exc.code} from {url}: {detail[:300]}") from exc
+        except (urllib.error.URLError, ConnectionError, OSError,
+                http.client.IncompleteRead, http.client.HTTPException) as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+    raise RuntimeError(f"request to {url} failed after 3 attempts: {last_error}") from last_error
 
 
 def fetch_token(email: str, password: str) -> str:
@@ -128,9 +140,10 @@ def verify_token(token: str) -> int:
     error = payload.get("error", payload.get("e", 0))
     if error:
         raise RuntimeError(f"wallet/list rejected the token: {payload.get('msg') or payload}")
-    wallets = (payload.get("data") or {}).get("wallets")
+    data = payload.get("data")
+    wallets = data.get("wallets") if isinstance(data, dict) else data
     if wallets is None:
-        wallets = payload.get("data") or []
+        wallets = []
     if not isinstance(wallets, list):
         raise RuntimeError("wallet/list returned an unexpected shape")
     return len(wallets)

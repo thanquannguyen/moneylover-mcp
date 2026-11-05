@@ -46,7 +46,8 @@ def make_urlopen(calls):
             return FakeResponse({"access_token": "tok-123"})
         if req.full_url.endswith("/wallet/list"):
             assert req.headers["Authorization"] == "AuthJWT tok-123"
-            return FakeResponse({"error": 0, "data": {"wallets": [{"name": "A"}, {"name": "B"}]}})
+            # Live API returns data as a bare list of wallets.
+            return FakeResponse({"error": 0, "data": [{"name": "A"}, {"name": "B"}]})
         raise AssertionError(req.full_url)
 
     return urlopen
