@@ -45,6 +45,25 @@ npm start
 
 A `token` argument to any tool overrides environment authentication.
 
+## Refreshing an expired token
+
+The server only auto-refreshes on error 717 / `token_device_not_found`.
+If calls start failing with error 706 (`Not authorized`), fetch a fresh
+token with the standalone script (Python 3, standard library only; the
+password is prompted with `getpass` and never stored):
+
+```bash
+python3 scripts/refresh_token.py --email you@example.com
+```
+
+It runs the same two-step login as the server, verifies the token with
+`wallet/list`, and caches it at `~/.moneylover-mcp/<base64url(email)>.json`
+(directory `0700`, file `0600`). Its tests are mocked and need no network:
+
+```bash
+python3 test/refresh_token.test.py
+```
+
 ## Security
 
 - Only MoneyLover hosts are contacted: `https://web.moneylover.me/api` and `https://oauth.moneylover.me/token`.
