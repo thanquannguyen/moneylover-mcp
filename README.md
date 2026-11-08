@@ -1,5 +1,12 @@
 # moneylover-mcp
 
+[![License: MIT](https://img.shields.io/github/license/thanquannguyen/moneylover-mcp?style=flat-square)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/thanquannguyen/moneylover-mcp?style=flat-square)](https://github.com/thanquannguyen/moneylover-mcp/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/thanquannguyen/moneylover-mcp?style=flat-square)](https://github.com/thanquannguyen/moneylover-mcp/forks)
+[![Last commit](https://img.shields.io/github/last-commit/thanquannguyen/moneylover-mcp?style=flat-square)](https://github.com/thanquannguyen/moneylover-mcp/commits/main)
+[![Repo size](https://img.shields.io/github/repo-size/thanquannguyen/moneylover-mcp?style=flat-square)](https://github.com/thanquannguyen/moneylover-mcp)
+![Top language](https://img.shields.io/github/languages/top/thanquannguyen/moneylover-mcp?style=flat-square)
+
 An unofficial Model Context Protocol (MCP) server for MoneyLover, exposed over stdio for MCP-compatible clients.
 
 MoneyLover provides no official public API. This server uses the unofficial web API employed by the MoneyLover web application. It may cease to function if that API changes.
